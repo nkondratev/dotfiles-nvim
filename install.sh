@@ -10,6 +10,12 @@ rm luarocks-3.13.0-linux-x86_64.zip
 mv luarocks-3.13.0-linux-x86_64/luarocks $HOME/.local/bin/luarocks
 rm -r luarocks-3.13.0-linux-x86_64
 
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/DepartureMono.zip
+mkdir -p $HOME/.local/share/fonts/DepartureMono
+unzip DepartureMono.zip -d $HOME/.locale/share/fonts/DepartureMono
+rm DepartureMono.zip
+fc-cache -v
+
 mkdir -p $HOME/.config/nvim
 cp -r * $HOME/.config/nvim/
 rm $HOME/.config/nvim/install.sh
